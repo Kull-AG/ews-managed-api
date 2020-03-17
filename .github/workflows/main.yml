@@ -35,5 +35,15 @@ jobs:
         name: Compiled
         # Destination path
         path: bin/Release
+    
+    - name: Setup .NET Core @ Latest
+      uses: actions/setup-dotnet@v1
+      with:
+        source-url: https://nuget.pkg.github.com/KULL-ag/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
+
+    - name: Push generated package to GitHub registry
+      run: dotnet nuget push ./bin/Release/*.nupkg --skip-duplicate --no-symbols true
 
 
