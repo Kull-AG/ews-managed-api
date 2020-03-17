@@ -26,7 +26,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: msbuild
-      run: msbuild -p Microsoft.Exchange.WebServices.Data.sln -p:Configuration=Release
+      run: msbuild Microsoft.Exchange.WebServices.Data.sln -p:Configuration=Release
       
     - name: Download artifact
       uses: actions/download-artifact@v1.0.0
