@@ -44,6 +44,6 @@ jobs:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
 
     - name: Push generated package to GitHub registry
-      run: dotnet nuget push bin/Release/*.nupkg --skip-duplicate --no-symbols true
+      run: dotnet nuget push bin/Release/Microsoft.Exchange.WebServices.2.3.0.nupkg --skip-duplicate --no-symbols true
 
 
