@@ -36,9 +36,4 @@ jobs:
         # Destination path
         path: bin/Release
     
-    - name: Add private GitHub registry to NuGet
-      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/kull-ag/index.json -Username kull-ag -Password ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Push generated package to GitHub registry
-      run: nuget push bin/Release/Microsoft.Exchange.WebServices.2.3.0.nupkg -Source "GPR" -SkipDuplicate
 
