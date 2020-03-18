@@ -33,6 +33,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<RepositoryUrl>https://github.com/Kull-AG/ews-managed-api.git</RepositoryUrl> 
     <RepositoryType>git</RepositoryType> 
   </PropertyGroup>
